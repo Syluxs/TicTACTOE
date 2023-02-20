@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.titre {
+    text-decoration: none;
+    color: #0af;
+    margin-top: -390px;
+}
+.game {
+    background-image: url(/img/giphy-3512020535.gif);
+    background-size: cover;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    color: #0af;
+    font-size: 90px;
+    
+  }
+  
+  .cell {
+    border: 2px solid #0af;
+    width: 90px;
+    height: 90px;
+    transition: background-color 0.3s;
+  }
+  
+  .cell:hover {
+    background-color: #07c;
+  }
+  
+  .cell.X::before,
+  .cell.O::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: #0af;
+    z-index: -1;
+   
+  }
+  
+  .cell.X::before {
+    top: 0;
+    left: 0;
+    transform: skew(-45deg);
+  }
+  
+  .cell.O::before {
+    top: 25%;
+    left: 25%;
+    border-radius: 50%;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    color: #fff;
+  }
+  
+  .timer, .moves {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .restart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #0af;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .restart:hover {
+    background-color: #07c;
+  }
+  
